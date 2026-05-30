@@ -50,10 +50,12 @@
 for y in range (1,7):
     s = ""
     for x in range (1,9):
-        if x == y:
+        if x == y+1 :
             s += "#"
         else:
             s += "."
     print(s)
-
+# Programmet kommer skriva ut 6 rader där varje gång x = y så kommer en # skrivas ut. Raderna är 8 breda som beskrivs i forloppen inuti forloopen.
+# För varje gång x och Y inte är samma skrivs en punkt.
+# För att flytta linjen kan vi ändra if statement till if x == y + 1, då kommer hashtagen alltid ske ett snäpp fram från där x och y är samma.
 
