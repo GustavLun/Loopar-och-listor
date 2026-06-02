@@ -14,6 +14,8 @@
 #     else:
 #         print(i)
 #         i=i+1
+from gettext import find
+from operator import index, indexOf
 
 # #1.3
 # # Kan vara så att den köra oändligt då i aldrig blir högre än 0, eller så kör den 6 gånger och den kommer printa varje nummer upp till 5.
@@ -46,16 +48,85 @@
 # print(message [4:8])
 # # Vi fastslår ett värde på variablen message, efter detta körs en print med två klamer som innehåller range där vi specificerar en start och ett slut på värdet vi givit "message"
 
-#1.5
-for y in range (1,7):
-    s = ""
-    for x in range (1,9):
-        if x == y+1 :
-            s += "#"
-        else:
-            s += "."
-    print(s)
-# Programmet kommer skriva ut 6 rader där varje gång x = y så kommer en # skrivas ut. Raderna är 8 breda som beskrivs i forloppen inuti forloopen.
-# För varje gång x och Y inte är samma skrivs en punkt.
-# För att flytta linjen kan vi ändra if statement till if x == y + 1, då kommer hashtagen alltid ske ett snäpp fram från där x och y är samma.
+# #1.5
+# for y in range (1,7):
+#     s = ""
+#     for x in range (1,9):
+#         if x == y+1 :
+#             s += "#"
+#         else:
+#             s += "."
+#     print(s)
+# # Programmet kommer skriva ut 6 rader där varje gång x = y så kommer en # skrivas ut. Raderna är 8 breda som beskrivs i forloppen inuti forloopen.
+# # För varje gång x och Y inte är samma skrivs en punkt.
+# # För att flytta linjen kan vi ändra if statement till if x == y + 1, då kommer hashtagen alltid ske ett snäpp fram från där x och y är samma.
+
+# # 2 Öva på loopar och listor
+#
+# # 1A
+# answer = 0
+# for i in range (1,11): # 11 måste läggas till då man räknar bryter innan sista talet på rangen, hade jag tagit till 10 hade det bara blivit 9.
+#     answer += i
+# print ("Summan av talen 1 till 10 är:" + str(answer))
+
+# # 1b
+# answer = 0
+# for i in range (1, 101):
+#     answer += i
+# print ("Summan av talen 1 till 100 är: " + str(answer))
+
+# # 1c
+# answer = 0
+# while answer < 5050:
+#     for i in range (101):
+#      answer += i
+# else: print ("Summan av talen 1 till 100 är: " + str(answer))
+
+# # 2
+# print (sum(list ([1, -2, 3, -2, 4, -3])))
+
+# 3 Träna på att skapa och manipulera listor. Alla uppgifter ska lösas med funktionerna som står i presentationen.
+# 3a Skapa en lista med namnen på fyra filmer. Namnen ska vara strängar. Skriv ut hela listan med funktionen print.
+
+# movies = ["inception", "Interstellar", "Super mario", "Spider-man"]
+# print (movies)
+
+# # 3b Lägg till "Fellowship of the ring" sist i listan.
+#
+# movies = ["inception", "Interstellar", "Super mario", "Spider-man", "Fellowship of the ring"]
+# print (movies)
+#
+# # 3c Lägg till "The two towers" på första platsen i listan. (index noll)
+# movies = ["The two towers","inception", "Interstellar", "Super mario", "Spider-man", "Fellowship of the ring"]
+# print (movies)
+
+# # 3d Ta reda på vilken position (index) "Fellowship of the ring" har nu.
+# movies = ["The two towers","inception", "Interstellar", "Super mario", "Spider-man", "Fellowship of the ring"]
+# index = movies.index("Fellowship of the ring")
+# print("Fellowship of the ring ligger på plats ", index)
+# # Index för filmen är 5
+#
+# # 3e Ta bort en annan av filmerna. Har Fellowship-filmen ändrat index?
+#
+# movies = ["The two towers","inception", "Interstellar", "Spider-man", "Fellowship of the ring"]
+# index = movies.index("Fellowship of the ring")
+# print("Fellowship of the ring ligger nu på plats ", index)
+# #Ja programmet säger att index nu är 4
+#
+# # 3f Ta reda på hur lång listan är. (len)
+# movies = ["The two towers","inception", "Interstellar", "Spider-man", "Fellowship of the ring"]
+# print("I listan finns totalt",len(movies), "filmer")
+#
+# # 3g Vänd listan baklänges.
+#
+# movies = ["The two towers","inception", "Interstellar", "Spider-man", "Fellowship of the ring"]
+# movies.reverse()
+# print(movies)
+#
+# # 3h Sortera listan stigande i bokstavsordning.
+# movies = ["The two towers","Inception", "Interstellar", "Spider-man", "Fellowship of the ring"]
+# movies.sort()
+# print(movies)
+
+# 3 Kvittouträknaren
 
