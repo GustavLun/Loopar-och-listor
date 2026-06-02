@@ -14,8 +14,8 @@
 #     else:
 #         print(i)
 #         i=i+1
-from gettext import find
-from operator import index, indexOf
+from contextlib import nullcontext
+from tokenize import blank_re
 
 # #1.3
 # # Kan vara så att den köra oändligt då i aldrig blir högre än 0, eller så kör den 6 gånger och den kommer printa varje nummer upp till 5.
@@ -128,5 +128,72 @@ from operator import index, indexOf
 # movies.sort()
 # print(movies)
 
-# 3 Kvittouträknaren
+# # 3 Kvittouträknaren
+# Total = 0
+# while True:
+#     tal=input("Skriv ett tal eller quit ")
+#
+#     if tal == "quit":
+#         break
+#
+#     addering = int(tal)
+#     Total += addering
 
+
+# # Version 2
+# Total = 0
+# while True:
+#     tal=input("Skriv ett tal eller quit ")
+#
+#     if tal == "quit":
+#         break
+#
+#     addering = int(tal)
+#     Total += addering
+#
+# antal_folk = int(input(" hur många är ni i sällskapet? "))
+#
+# print(f"Totala summan blir", Total, f"Detta motsvarar {Total / antal_folk} kronor per person")
+
+# Version 3
+Total = 0
+while True:
+    tal=input("Skriv ett tal eller quit ")
+
+    if tal == "quit":
+        break
+    if tal .isdigit():
+        addering = int(tal)
+        Total += addering
+    else:
+        print("Endast siffror tack")
+
+
+while True:
+    antal_folk = (input(" hur många är ni i sällskapet? "))
+    if antal_folk.isdigit() and int (antal_folk) > 0:
+        antal_folk = int(antal_folk)
+        break
+    else:
+        print(" Skriv ett heltal större än 0")
+
+print("Totala summan blir", Total, f"Detta motsvarar kronor per person", Total / int(antal_folk))
+
+while True:
+    tip_question = (input("Hur många procent i dricks vill ni betala "))
+
+    if tip_question == "":
+        tip_request = 10
+        print(f" Eftersom du inte valde någon drick blir den automatiskt 10%")
+        break
+
+    if tip_question.isdigit():
+        tip_request = int(tip_question)
+        break
+    else:
+        print(" Endast siffror eller tryck enter")
+
+if tip_request > 0:
+    print(f"Då ska ni betala {Total * (tip_request / 100)} kronor i dricks")
+elif tip_request <= 0:
+    print("Okej ingen dricks tack ändå ")
