@@ -156,44 +156,54 @@ from tokenize import blank_re
 # print(f"Totala summan blir", Total, f"Detta motsvarar {Total / antal_folk} kronor per person")
 
 # Version 3
-Total = 0
-while True:
-    tal=input("Skriv ett tal eller quit ")
+# Total = 0
+# while True:
+#     tal=input("Skriv ett tal eller quit ")
+#
+#     if tal == "quit":
+#         break
+#     if tal .isdigit():
+#         addering = int(tal)
+#         Total += addering
+#     else:
+#         print("Endast siffror tack")
+#
+#
+# while True:
+#     antal_folk = (input(" hur många är ni i sällskapet? "))
+#     if antal_folk.isdigit() and int (antal_folk) > 0:
+#         antal_folk = int(antal_folk)
+#         break
+#     else:
+#         print(" Skriv ett heltal större än 0")
+#
+# print("Totala summan blir", Total, f"Detta motsvarar kronor per person", Total / int(antal_folk))
+#
+# while True:
+#     tip_question = (input("Hur många procent i dricks vill ni betala "))
+#
+#     if tip_question == "":
+#         tip_request = 10
+#         print(f" Eftersom du inte valde någon drick blir den automatiskt 10%")
+#         break
+#
+#     if tip_question.isdigit():
+#         tip_request = int(tip_question)
+#         break
+#     else:
+#         print(" Endast siffror eller tryck enter")
+#
+# if tip_request > 0:
+#     print(f"Då ska ni betala {Total * (tip_request / 100)} kronor i dricks")
+# elif tip_request <= 0:
+#     print("Okej ingen dricks tack ändå ")
 
-    if tal == "quit":
-        break
-    if tal .isdigit():
-        addering = int(tal)
-        Total += addering
-    else:
-        print("Endast siffror tack")
-
-
-while True:
-    antal_folk = (input(" hur många är ni i sällskapet? "))
-    if antal_folk.isdigit() and int (antal_folk) > 0:
-        antal_folk = int(antal_folk)
-        break
-    else:
-        print(" Skriv ett heltal större än 0")
-
-print("Totala summan blir", Total, f"Detta motsvarar kronor per person", Total / int(antal_folk))
-
-while True:
-    tip_question = (input("Hur många procent i dricks vill ni betala "))
-
-    if tip_question == "":
-        tip_request = 10
-        print(f" Eftersom du inte valde någon drick blir den automatiskt 10%")
-        break
-
-    if tip_question.isdigit():
-        tip_request = int(tip_question)
-        break
-    else:
-        print(" Endast siffror eller tryck enter")
-
-if tip_request > 0:
-    print(f"Då ska ni betala {Total * (tip_request / 100)} kronor i dricks")
-elif tip_request <= 0:
-    print("Okej ingen dricks tack ändå ")
+# 4
+for y in range (1,7):
+    s=""
+    for x in range (1,9):
+        if x == y:
+            s += "#"
+        else:
+            s += "."
+    print(s)
