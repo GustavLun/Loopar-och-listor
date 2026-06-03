@@ -199,11 +199,130 @@ from tokenize import blank_re
 #     print("Okej ingen dricks tack ändå ")
 
 # 4
-for y in range (1,7):
-    s=""
-    for x in range (1,9):
-        if x == y:
-            s += "#"
-        else:
-            s += "."
-    print(s)
+#A
+# for y in range (1,7):
+#     s=""
+#     for x in range (1,9):
+#         if x == 1 :
+#             s += "#"
+#         else:
+#             s += "."
+#     print(s)
+ #B
+# for y in range(1, 7):
+#     s = ""
+#     for x in range(1, 9):
+#         if x +1 == y + 1:
+#             s += "#"
+#         else:
+#             s += "."
+#     print(s)
+#
+#C
+# for y in range(1, 7):
+#     s = ""
+#     for x in range(1, 9):
+#         if x == 3 or x == 4 or x == 5:
+#             s += "#"
+#         else:
+#             s += "."
+#     print(s)
+ #D
+# for y in range(1, 7):
+#     s = ""
+#     for x in range(1, 9):
+#         if x == 3 or y == 3:
+#             s += "#"
+#         else:
+#             s += "."
+#     print(s)
+
+#E
+# for y in range(1, 7):
+#     s = ""
+#     for x in range(1, 9):
+#         if x == 5 or x == 7 - y :
+#             s += "#"
+#         else:
+#             s += "."
+#     print(s)
+
+#f
+# for y in range(1, 7):
+#     s = ""
+#     for x in range(1, 9):
+#         if x == 0 + y or x == 7 - y :
+#             s += "#"
+#         else:
+#             s += "."
+#     print(s)
+
+#g
+# for y in range(1, 7):
+#     s = ""
+#     for x in range(1, 9):
+#         if x == 1 or x == 3 or x == 5 or x == 7:
+#             s += "#"
+#         else:
+#             s += "."
+#     print(s)
+
+#h
+# for y in range(1, 7):
+#     s = ""
+#     for x in range(1, 9):
+#         if y == 1 or y == 6   :
+#             s += "."
+#         elif y == 2 or y == 5:
+#             if x == 1 or x == 8:
+#                 s += "."
+#             else:
+#              s += "#"
+#         else:
+#             if x == 2 or x == 7:
+#                 s += "#"
+#             else:
+#              s += "."
+#     print(s)
+
+#i
+# for y in range(1, 7):
+#     s = ""
+#     for x in range(1, 9):
+#         if y == 1 or y == 6   :
+#             s += "."
+#         elif y == 2 or y == 5:
+#             if x == 1 or x == 8:
+#                 s += "."
+#             else:
+#              s += "#"
+#         else:
+#             if x == 2 or x == 7:
+#                 s += "#"
+#             else:
+#              s += "."
+#     print(s) # Nej kommer inte kunna lösa ...
+
+#J
+# for y in range(1, 7):
+#     s = ""
+#     for x in range(1, 9):
+#         if y == 1 or y == 2 or y == 3:
+#             if x == 3 or x == 6:
+#              s += "#"
+#             else:
+#                 s += "."
+#         if y == 4:
+#             s += "."
+#         if y == 5:
+#             if x == 2 or x == 4 or x == 6 or x == 8:
+#                 s += "#"
+#             else:
+#                 s += "."
+#         if y == 6:
+#             if x == 1 or x == 3 or x == 5 or x == 7:
+#                 s += "#"
+#             else:
+#                 s += "."
+#     print(s)
+
