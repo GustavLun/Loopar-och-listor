@@ -14,6 +14,7 @@
 #     else:
 #         print(i)
 #         i=i+1
+import random
 from contextlib import nullcontext
 from tokenize import blank_re
 
@@ -326,3 +327,30 @@ from tokenize import blank_re
 #                 s += "."
 #     print(s)
 
+# # 5 Gissa talet version 1
+# secret = random.randint (1,100)
+# while True:
+#     guess = (int(input("Välkommen, gissa på ett tal mellan 1-100")))
+#     if guess < secret:
+#         print("Det var för lågt gissa igen")
+#     elif guess > secret:
+#         print("Det var för högt gissa igen")
+#     else:
+#         print("Grattis det var rätt")
+#         break
+
+# 5 Gissa talet version 2
+secret = random.randint (1,100)
+while True:
+    guess = (int(input("Välkommen, gissa på ett tal mellan 1-100 ")))
+    if guess < secret:
+        print("Det var för lågt gissa igen")
+        if secret - guess <=5:
+            print("Nära! Du är max 5 tal ifrån")
+    elif guess > secret:
+        print("Det var för högt gissa igen")
+        if guess - secret <=5:
+            print("Nära! du är max 5 tal ifrån")
+    else:
+        print("Grattis det var rätt")
+        break
