@@ -340,17 +340,118 @@ from tokenize import blank_re
 #         break
 
 # 5 Gissa talet version 2
-secret = random.randint (1,100)
+# secret = random.randint (1,100)
+# while True:
+#     guess = (int(input("Välkommen, gissa på ett tal mellan 1-100 ")))
+#     if guess < secret:
+#         print("Det var för lågt gissa igen")
+#         if secret - guess <=5:
+#             print("Nära! Du är max 5 tal ifrån")
+#     elif guess > secret:
+#         print("Det var för högt gissa igen")
+#         if guess - secret <=5:
+#             print("Nära! du är max 5 tal ifrån")
+#     else:
+#         print("Grattis det var rätt")
+#         break
+
+# 6 todo_list
+# todo_list = []
+# while True:
+#     print("Välkommen till din todo list ")
+#     print("1. Se innehållet i din lista ")
+#     print("2. Lägga till nya punkter i din lista")
+#     print("3. Avsluta")
+#
+#     Val= input(" Välj ett av alternativen 1 och 2 ")
+#
+#     if Val == "1":
+#         for sak in todo_list:
+#             print(sak)
+#
+#     elif Val == "2":
+#         print(" Skriv in en sak du till lägga till i listan ")
+#         ny_sak = input("")
+#         todo_list.append(ny_sak)
+#         print(" Okej, lade till ", ny_sak)
+#     elif Val == "3":
+#         break
+
+#Version 2
+# todo_list = []
+# while True:
+#     print("Välkommen till din todo-list ")
+#     print("1. Se innehållet i din lista ")
+#     print("2. Lägga till nya punkter i din lista")
+#     print("3 Markera en sak som färdig")
+#     print("4. Avsluta")
+#
+#     Val= input(" Välj ett av alternativen 1 och 2 ")
+#
+#     if Val == "1":
+#         print("Här är din nuvarande lista ")
+#         for sak in todo_list:
+#             print(sak,"\n")
+#
+#     elif Val == "2":
+#         print(" Skriv in en sak du till lägga till i listan ")
+#         ny_sak = input("")
+#         todo_list.append(ny_sak)
+#         print(" Okej, lade till ", ny_sak , "Från listan \n")
+#     elif Val == "3":
+#         print(" Skriv vad du vill ta bort från listan ")
+#         for sak in todo_list:
+#             print(sak)
+#         sak_bort = input("")
+#         todo_list.remove(sak_bort)
+#         print(" Okej, tar bort " , sak_bort ,"från listan \n")
+#     elif Val == "4":
+#         break
+
+#Version 3
+todo_list = []
+todo_list_done = []
 while True:
-    guess = (int(input("Välkommen, gissa på ett tal mellan 1-100 ")))
-    if guess < secret:
-        print("Det var för lågt gissa igen")
-        if secret - guess <=5:
-            print("Nära! Du är max 5 tal ifrån")
-    elif guess > secret:
-        print("Det var för högt gissa igen")
-        if guess - secret <=5:
-            print("Nära! du är max 5 tal ifrån")
-    else:
-        print("Grattis det var rätt")
+    print("\n Välkommen till din todo list ")
+    print("1. Se innehållet i din lista ")
+    print("2. Lägga till nya punkter i din lista")
+    print("3 Markera en sak som färdig")
+    print("4 Visa dina avslutade saker ")
+    print("5. Avsluta")
+
+    Val= input(" Välj ett av alternativen 1-4 ")
+
+    if Val == "1":
+        print("Här är din nuvarande lista ")
+        for sak in todo_list:
+            print(sak)
+
+    elif Val == "2":
+        print(" Skriv in en sak du till lägga till i listan ")
+        sak = input("")
+        todo_list.append(sak)
+        print(" Okej, lade till ", sak , "Från listan \n")
+
+    elif Val == "3":
+        print(" Skriv vad du färdig med ")
+        for sak in todo_list:
+            print(sak)
+        sak = input("")
+        todo_list_done.append(sak)
+        todo_list.remove(sak)
+        print(" Okej, tar bort " , sak ,"från listan \n")
+
+    elif Val == "4":
+        print("Här är din avklarade saker ")
+        for sak in todo_list_done:
+            print(sak)
+        Svar = input(" Vill du lägga tillbaka något avklarat i todo listan? Svara ja eller nej")
+        if Svar == "ja":
+            print(" Skriv saken du vill lägga tillbaka ")
+            sak = input("")
+            todo_list_done.remove(sak)
+            todo_list.append(sak)
+        else:
+            continue
+    elif Val == "5":
         break
